@@ -125,7 +125,7 @@ function hit() {
     playerCashValue--;
     showPlayAgain();
   } else if (playerCardValue > 21 && checkAces(playerCardValue, playerCards)) {
-    alert('Player had an ace removed 10');
+    //alert('Player had an ace removed 10');
     playerCards.push(-1);
     playerCardValue -= 10;
     updateHands();
@@ -137,7 +137,7 @@ function stay() {
     dealerCardValue += drawRandom(1, dealerCards);
     updateHands();
     if (dealerCardValue > 21 && checkAces(dealerCardValue, dealerCards)) {
-      alert('Dealer had aces removed 10');
+      //alert('Dealer had aces removed 10');
       dealerCards.push(-1);
       dealerCardValue -= 10;
       updateHands();
