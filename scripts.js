@@ -13,6 +13,8 @@ var recentAction = document.getElementById("most-recent");
 var dealerDisplayCards = document.getElementById("dealer-cards");
 var playerDisplayCards = document.getElementById("player-cards");
 var playButton = document.getElementById("play-button");
+var hitButton = document.getElementById("hit-button");
+var stayButton = document.getElementById("stay-button");
 
 function drawRandom(n,player) {
   drawnCards;
@@ -56,10 +58,15 @@ function updateRecent(text) {
 
 function showPlayAgain() {
   playButton.style.visibility = "visible";
+  hitButton.style.visibility = "hidden";
+  stayButton.style.visibility = "hidden";
+
 }
 
 function mainFunction() {
   playButton.style.visibility = "hidden";
+  hitButton.style.visibility = "visible";
+  stayButton.style.visibility = "visible";
   if (cards.length < 8) {
     //updateRecent("Re-shuffling cards")
     cards = [2,3,4,5,6,7,8,9,10,10,10,10,11,2,3,4,5,6,7,8,9,10,10,10,10,11,2,3,4,5,6,7,8,9,10,10,10,10,11,2,3,4,5,6,7,8,9,10,10,10,10,11];
